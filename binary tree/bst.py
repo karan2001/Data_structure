@@ -9,7 +9,7 @@ class Node:
 class BinarySearchTree:
     def __init__(self):
         self.root=None 
-    def insert(self):
+    def insert(self,val):
         if self.root is None:
             self.root=Node(val)
         else:
@@ -61,10 +61,17 @@ def search(root,key):
         return s
 
 tree=BinarySearchTree()
-num=int(input("How many Node :"))
-for i in range(num):
-    val=int(input("enter the numbers :"))
-    tree.insert(val)
+tree.insert(6)
+tree.insert(9)
+tree.insert(5)
+tree.insert(2)
+tree.insert(15)
+tree.insert(24)
+tree.insert(14)
+tree.insert(7)
+tree.insert(8)
+tree.insert(7)
+tree.insert(2)
 print()
 print("Preorder Printing :")
 tree.Preorder(tree.root)

@@ -16,16 +16,13 @@ class linkedlist:
         else:
             self.last_node.next = Node(data)
             self.last_node = self.last_node.next
-            # self.last_node.next=self.head
 
     def display(self):
         current = self.head
         while current is not None:
             print(current.data, end=' ')
             current = current.next
-            # if current.next==self.head:
-            #     break
-        print(self.head)
+            
 
     def find(self, key):
         current = self.head
@@ -53,7 +50,7 @@ class linkedlist:
 
 
 a_list = linkedlist()
-n = int(input("num"))
+n = int(input("Number Of nodes to be added"))
 for i in range(n):
     data = int(input('enter data item'))
     a_list.append(data)

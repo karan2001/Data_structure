@@ -37,7 +37,7 @@ class BinarySearchTree:
         else:
             self.Inorder(node.left)
             print(node.data,end=" ")
-               self.Inorder(node.right)
+            self.Inorder(node.right)
     def Postorder(self,node):
         if(node==None):
             return
@@ -65,10 +65,18 @@ def search(root,key):
 
 
 tree=BinarySearchTree()
-num=int(input("How many Node :"))
-for i in range(num):
-    val=int(input("enter the numbers :"))
-    tree.insert(val)
+tree.insert(6)
+tree.insert(9)
+tree.insert(5)
+tree.insert(2)
+tree.insert(15)
+tree.insert(24)
+tree.insert(14)
+tree.insert(7)
+tree.insert(8)
+tree.insert(7)
+tree.insert(2)
+
 print("Preorder Printing :")
 tree.Preorder(tree.root)
 print("\nInorder Printing :")
