@@ -12,14 +12,18 @@ class LinkedList:
 
     def __init__(self):
         self.top = None
+        self.last=None
 
     def push(self, val):
         if self.top == None:
             self.top = node(val)
+            self.last=self.top
         else:
-            temp = self.top
-            self.top = node(val)
-            self.top.next = temp
+            # temp = self.top
+            # self.top = node(val)
+            # self.top.next=temp
+            self.last.next = node(val)
+            self.last=self.last.next
 
     def display(self):
         temp = self.top
