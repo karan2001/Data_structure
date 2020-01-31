@@ -15,6 +15,7 @@ def partition(arr, low, high):
 
 
 def quickSort(arr, low, high):
+
     if low < high:
 
         pi = partition(arr, low, high)
@@ -24,9 +25,9 @@ def quickSort(arr, low, high):
 
 
 # Driver code
-arr = [10, 7, 8, 9, 1, 5]
-n = len(arr)
-quickSort(arr, 0, n-1)
+arr=[1,2,3,4,5,0,9]
+n = len(arr)-1
+quickSort(arr, 0, n)
 print("Sorted array is:")
 for i in range(n):
     print("%d" % arr[i]),

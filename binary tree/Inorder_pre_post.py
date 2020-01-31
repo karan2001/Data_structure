@@ -61,7 +61,7 @@ def search(root,key):
         return search(root.right,key) 
     
     else:
-        search(root.left,key) 
+        return search(root.left,key) 
 
 
 tree=BinarySearchTree()

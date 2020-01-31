@@ -1,12 +1,14 @@
-def mergeSort(arr):
+def merge(arr):
     if len(arr) > 1:
         mid = len(arr)//2
         L = arr[:mid]
         R = arr[mid:]
-        mergeSort(L)
-        mergeSort(R)
+
+        merge(L)
+        merge(R)
 
         i = j = k = 0
+
         while i < len(L) and j < len(R):
             if L[i] < R[j]:
                 arr[k] = L[i]
@@ -25,7 +27,6 @@ def mergeSort(arr):
             k += 1
 
 
-list = [5, 2, 9, 7, 3, 1]
-
-mergeSort(list)
-print(list)
+arr = [5, 1, 9, 2, 5, 9]
+merge(arr)
+print(arr)
