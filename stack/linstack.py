@@ -1,3 +1,5 @@
+import os
+os.system('cls')
 # Node class
 class node:
     # Function to initialize the node object
@@ -17,13 +19,13 @@ class LinkedList:
     def push(self, val):
         if self.top == None:
             self.top = node(val)
-            self.last=self.top
+            # self.last=self.top
         else:
-            # temp = self.top
-            # self.top = node(val)
-            # self.top.next=temp
-            self.last.next = node(val)
-            self.last=self.last.next
+            temp = self.top
+            self.top = node(val)
+            self.top.next=temp
+            # self.last.next = node(val)
+            # self.last=self.last.next
 
     def display(self):
         temp = self.top
@@ -32,26 +34,48 @@ class LinkedList:
             temp = temp.next
 
     def pop(self): 
-        poppednode = self.top 
-        self.top = self.top.next
-        poppednode.next= None
-        return poppednode.data 
+        if self.top is not  None:
+            poppednode = self.top 
+            self.top = self.top.next
+            poppednode.next= None
+            print("After pop")
+            self.display()
+            print()
+            return poppednode.data 
+        else:
+            print("cannot pop an empty stack!!")
           
         
              
 
 
+
+
+
 a_list = LinkedList()
-n = int(input("how many elements"))
-for i in range(n):
-    data = (int(input("enter data: ")))
-    a_list.push(data)
 
-print("linked list = ")
 
-a_list.display()
+while True:
+    x= int(input("1.push\n2.pop\n3.quit\n"))
+    
+    if x==1:
+        n = int(input("how many elements"))
+        for i in range(n):
+            data = (int(input("enter data: ")))
+            a_list.push(data)
+        a_list.display()
+        print()
 
-print("\n After pop : ")
-a_list.pop()
-a_list.pop()
-a_list.display()
+    if x==2:
+        a_list.pop()
+    if x==3:
+        print("shutting down")
+        os.system('cls')
+
+        break
+        
+    else:
+        print("Enter a Correct option!!")
+        os.system('cls')
+    
+        

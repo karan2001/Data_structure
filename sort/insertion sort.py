@@ -7,6 +7,9 @@ def insertionSort(nlist):
         while position > 0 and nlist[position-1] > currentvalue:
             nlist[position] = nlist[position-1]
             position -= 1
+            print(nlist)
+        print(nlist)
+        print()
         nlist[position] = currentvalue
 
 

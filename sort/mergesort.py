@@ -15,6 +15,7 @@ def mergeSort(arr):
                 arr[k] = R[j]
                 j += 1
             k += 1
+            print(arr)
         while i < len(L):
             arr[k] = L[i]
             i += 1
